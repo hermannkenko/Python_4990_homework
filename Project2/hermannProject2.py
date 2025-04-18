@@ -22,34 +22,34 @@ def is_prime(n):
     return True
 
 # Let define the highest prime number function for the given duration and n
-def highest_prime(duration=180, n=1000000):
+def highest_prime(duration=10):
     
  start_time = time.time()
  n = 0
  highest_primeNum = 2
- while ( time.time() - start_time < duration or n <= 1000000):
+ while  time.time() - start_time < duration:
         if is_prime(n):
             highest_primeNum = n
         n += 1
- return highest_primeNum
+ return math.highest_primeNum
 
 # Let define the factorial function for the highest prime number
 def factorial(n):
     n = highest_prime
-    return math.factorial(highest_prime(n))
+    return math.factorial(n)
 
 #let define the fibonacci function for the highest prime number
 def fibonacci(n, memo={}):
     if n in memo:
         return memo[n]
-    memo[n] = fibonacci(n)
+
     fibonacci(n) == fibonacci(n-1, memo) + fibonacci(n-2, memo)
     if n <= 0:
         return 0
     elif n == 1:
         return 1
     else:
-        return fibonacci(n)
+        return memo[n]
     
 # Let define the multiprocessing function
 def multiprocess_app():
